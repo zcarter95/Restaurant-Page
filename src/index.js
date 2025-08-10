@@ -1,6 +1,7 @@
 import "./styles.css";
 import { addTagline } from "./load-content";
 import addHome from "./home";
+import addContact from "./contact";
 
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
@@ -16,6 +17,8 @@ function ready() {
             switch (index) {
                 case 0:
                     addHome();
+                case 2:
+                    addContact();
             }
         })
     })
