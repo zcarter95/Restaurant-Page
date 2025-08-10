@@ -39,6 +39,11 @@ nav button {
     border: none;
     font-size: 2rem;
 }
+
+nav button:hover {
+    transform: scale(1.1);
+    font-weight: 700;
+}
 h1, p {
     text-align: center;
 }
@@ -50,7 +55,50 @@ h1, p {
     font-family: "MedievalSharp", cursive;
 }
 
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: "MedievalSharp", cursive;
+    margin: 0;
+}
+ul {
+    justify-self: center;
+}
+li { 
+    list-style: none;
+    text-align: start;
+    font-size: 1.5rem;
+}
 p {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 400;
+    line-height: 1.5;
+}
+
+.wrapper {
+    width: 50rem;
+    justify-self: center;
+    background-color: rgba(0, 0, 0, .75);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+}
+
+.wrapper p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#hours {
+    align-items: start;
+}
+
+.section {
+    display: grid;
+    align-items: start;
+    grid-template-rows: .5fr 4fr;
+}
+
+.underline {
+    text-decoration: underline;
 }
