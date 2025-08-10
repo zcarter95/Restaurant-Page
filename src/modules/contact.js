@@ -1,3 +1,4 @@
+import { removeHighlight } from "./helpers";
 let content = document.getElementById("content");
 function removeWrappers (){
     const wrappers = document.querySelectorAll(".wrapper");
@@ -28,4 +29,5 @@ export default function addContact () {
     removeWrappers();
     addWrapper();
     addLocation();
+    removeHighlight();
 }

@@ -1,7 +1,7 @@
 import "./styles.css";
-import { addTagline } from "./load-content";
-import addHome from "./home";
-import addContact from "./contact";
+import { addTagline } from "./modules/load-content";
+import addHome from "./modules/home";
+import addContact from "./modules/contact";
 
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
@@ -12,17 +12,17 @@ if (document.readyState == "loading") {
 function ready() {
     addTagline();
     addHome();
-    const buttons = document.querySelectorAll("nav button");
-    buttons.forEach((item, index) => {
-        item.addEventListener("click", () => {
-            switch (index) {
-                case 0:
-                    addHome();
-                case 2:
-                    addContact();
-            }
-        })
+    const homeButton = document.getElementById("home-tab");
+    homeButton.addEventListener("click", () => {
+        addHome();
+        homeButton.classList.add("underline");
     })
+    const contactButton = document.getElementById("contact-tab");
+    contactButton.addEventListener("click", () => {
+        addContact();
+        contactButton.classList.add("underline");
+    })
+
     highlightSelectedTab();
 }
 
