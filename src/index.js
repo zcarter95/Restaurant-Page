@@ -10,7 +10,15 @@ if (document.readyState == "loading") {
 
 function ready() {
     addTagline();
-    addHome();
+    const buttons = document.querySelectorAll("nav button");
+    buttons.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            switch (index) {
+                case 0:
+                    addHome();
+            }
+        })
+    })
     highlightSelectedTab();
 }
 
