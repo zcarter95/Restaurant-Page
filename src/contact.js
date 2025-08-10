@@ -1,4 +1,10 @@
 let content = document.getElementById("content");
+function removeWrappers (){
+    const wrappers = document.querySelectorAll(".wrapper");
+    wrappers.forEach((item, index) => {
+        item.remove();
+    })
+}
 function addWrapper () {
     let wrapper = document.createElement("div");
     wrapper.classList.add("wrapper");
@@ -19,6 +25,7 @@ function addLocation () {
     wrapper.appendChild(location);
 }
 export default function addContact () {
+    removeWrappers();
     addWrapper();
     addLocation();
 }
