@@ -1,11 +1,6 @@
 import { removeHighlight } from "./helpers";
+import { removeWrappers} from "./helpers";
 let content = document.getElementById("content");
-function removeWrappers (){
-    const wrappers = document.querySelectorAll(".wrapper");
-    wrappers.forEach((item, index) => {
-        item.remove();
-    })
-}
 function addWrapper () {
     let wrapper = document.createElement("div");
     wrapper.classList.add("wrapper");

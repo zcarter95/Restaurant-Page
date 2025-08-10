@@ -4,3 +4,10 @@ export function removeHighlight() {
         button.classList.remove("underline");
     })
 }
+
+export function removeWrappers (){
+    const wrappers = document.querySelectorAll(".wrapper");
+    wrappers.forEach((item, index) => {
+        item.remove();
+    })
+}

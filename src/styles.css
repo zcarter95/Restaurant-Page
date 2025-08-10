@@ -102,3 +102,12 @@ p {
 .underline {
     text-decoration: underline;
 }
+
+.section li {
+    text-align: center;
+    font-style: italic;
+}
+
+li p {
+    font-style: normal;
+}

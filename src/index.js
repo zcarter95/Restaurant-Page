@@ -2,6 +2,7 @@ import "./styles.css";
 import { addTagline } from "./modules/load-content";
 import addHome from "./modules/home";
 import addContact from "./modules/contact";
+import addMenu from "./modules/menu";
 
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
@@ -16,6 +17,11 @@ function ready() {
     homeButton.addEventListener("click", () => {
         addHome();
         homeButton.classList.add("underline");
+    })
+    const menuButton = document.getElementById("menu-tab");
+    menuButton.addEventListener("click", () => {
+        addMenu();
+        menuButton.classList.add("underline");
     })
     const contactButton = document.getElementById("contact-tab");
     contactButton.addEventListener("click", () => {
